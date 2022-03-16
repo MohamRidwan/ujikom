@@ -48,6 +48,7 @@
                         <th class="text-center">Jenis Barang</th>
                         <th class="text-center">Stok</th>
                         <th class="text-center">Satuan</th>
+                        <th class="text-center">cover</th>
                         <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
@@ -63,6 +64,7 @@
                         <td class="text-center">{{$data->jenis->nama_jenis}}</td>
                         <td class="text-center">{{$data->stok}}</td>
                         <td class="text-center">{{$data->satuan->nama_satuan}}</td>
+                        <td><center><img src="{{$data->image()}}" alt="" style="width:150px; height:150px;" alt="Cover"></center></td>
                         <td class="text-center">
                             <form class="text-center" action="{{route('barang.destroy',$data->id)}}" method="post">
                                 @method('delete')

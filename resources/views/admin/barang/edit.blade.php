@@ -56,6 +56,7 @@
 
                     </select>
                 </div>
+                
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit">Simpan</button>
                     <button class="btn btn-default" type="reset">Batal</button>

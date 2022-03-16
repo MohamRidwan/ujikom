@@ -47,6 +47,7 @@
                         <th class="text-center">Nama</th>
                         <th class="text-center">No Telepon</th>
                         <th class="text-center">Alamat</th>
+                        <th class="text-center">cover</th>
                         <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
@@ -58,6 +59,7 @@
                             <td class="text-center">{{$data->nama_supplier}}</td>
                             <td class="text-center">{{$data->no_telepon}}</td>
                             <td class="text-center">{{$data->alamat}}</td>
+                            <td><center><img src="{{$data->image()}}" alt="" style="width:150px; height:150px;" alt="Cover"></center></td>
                             <td>
                                 <form class="text-center" action="{{route('supplier.destroy',$data->id)}}" method="post">
                                 @method('delete')

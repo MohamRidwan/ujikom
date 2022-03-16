@@ -29,7 +29,7 @@
                     <span class="fa fa-angle-right">&nbsp;</span> Jenis Barang
                 </a></li>
                 <li class="{{ Request::is('barang')? "active":"" }}"><a href="/pengadaanbarang/barang">
-                    <span class="fa fa-angle-right">&nbsp;</span> Nama Barang
+                    <span class="fa fa-angle-right">&nbsp;</span> Data Barang
                 </a></li>
             </ul>
         </li>

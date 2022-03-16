@@ -25,7 +25,7 @@
     </div>
     <div class="panel-body">
         <div class="col-md-12">
-            <form role="form" action="{{ route('barang.store') }}" method="post">
+            <form role="form" action="{{ route('barang.store') }}" method="post" enctype="multipart/form-data">
             @csrf
                 <div class="form-group">
                     <label>Kode Barang</label>
@@ -55,6 +55,15 @@
 
                     </select>
                 </div>
+                <div class="form-group">
+                            <label for="">Masukan Foto Supplier</label>
+                            <input type="file" name="cover" class="form-control @error('cover') is-invalid @enderror">
+                             @error('cover')
+                                <span class="invalid-feedback" role="alert">
+                                    
+                                </span>
+                            @enderror
+                        </div>
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit">Simpan</button>
                     <button class="btn btn-default" type="reset">Batal</button>

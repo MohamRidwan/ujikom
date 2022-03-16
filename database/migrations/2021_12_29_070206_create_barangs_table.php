@@ -19,15 +19,17 @@ class CreateBarangsTable extends Migration
             $table->string('nama_barang');
             $table->integer('stok')->default(0);
             $table->biginteger('satuan_id')->unsigned();
-                    //foreign
-                    $table->foreign('satuan_id')
+            //foreign
+            $table->foreign('satuan_id')
                     ->references('id')
                     ->on('satuans');
             $table->biginteger('jenis_id')->unsigned();
-                    //foreign
-                    $table->foreign('jenis_id')
+            //foreign
+            $table->foreign('jenis_id')
                     ->references('id')
                     ->on('jenis');
+            $table->string('cover');
+
             $table->timestamps();
         });
     }
